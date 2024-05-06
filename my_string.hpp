@@ -1,9 +1,10 @@
 #pragma once
+#define _CRT_SECURE_NO_WARNINGS
 #include <string.h>
 #include <assert.h>
 #include <iostream>
 
-namespace my_std
+namespace mystd
 {
     class string
     {

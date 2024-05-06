@@ -20,7 +20,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="my_string.h">
+    <ClInclude Include="my_string.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="my_list.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="my_vector.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
