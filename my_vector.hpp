@@ -2,6 +2,180 @@
 
 namespace mystd
 {
+    template<class T>
+    class vector
+    {
+    public:
+        using value_type = T;
+        using iterator = value_type*;
+        using size_type = size_t;
+
+    public:
+        vector() { }
+        ~vector()
+        {
+            delete[] _start;
+            _size = _capacity = 0;
+        }
+
+        size_type size() const { return _size; }
+        size_type capacity() const { return _capacity; }
+
+        iterator begin() const { return _start; }
+        iterator end() const { return _start + _size; }
+
+        value_type& operator[](size_type pos)
+        {
+            assert(pos < size());
+            return _start[pos];
+        }
+        const value_type& operator[](size_type pos) const
+        {
+            assert(pos < size());
+            return _start[pos];
+        }
+
+        void reserve(size_type n)
+        {
+            if (n > _capacity)
+            {
+                // 两倍扩容
+                size_type new_capacity = ((n > 2 * _capacity) || (_capacity == 0)) ? n : 2 * _capacity;
+                iterator new_start = new value_type[new_capacity];
+                if (_start)
+                {
+                    for (int i = 0; i < _size; ++i)
+                    {
+                        new_start[i] = _start[i];
+                    }
+                    delete[] _start;
+                }
+
+                _start = new_start;
+                //_size
+                _capacity = new_capacity;
+            }
+        }
+
+        void insert(iterator pos, const value_type& val = T())
+        {
+            assert(pos >= _start);
+            assert(pos <= end());
+
+            size_type sz = pos - _start;
+
+            reserve(_size + 1);
+
+            // 如果扩容，需要更新pos迭代器位置
+            pos = _start + sz;
+
+            iterator _end = end() - 1;
+            while (_end >= pos)
+            {
+                *(_end + 1) = *_end;
+                --_end;
+            }
+
+            *pos = val;
+            ++_size;
+        }
+
+        void push_back(const value_type& val)
+        {
+            insert(end(), val);
+        }
+
+        iterator erase(iterator pos)
+        {
+            assert(pos >= _start);
+            assert(pos < end());
+
+            iterator it = pos + 1;
+            iterator _end = end();
+            while (it < _end)
+            {
+                *(it - 1) = *it;
+                ++it;
+            }
+
+            --_size;
+
+            return pos; // 返回删除位置下一个元素所在位置，依然是pos位置，只不过内容不同
+        }
+
+        void pop_back()
+        {
+            erase(end() - 1);
+        }
+    public:
+        template<class InputIterator>
+        vector(InputIterator first, InputIterator last)
+        {
+            while (first != last)
+            {
+                push_back(*first);
+                ++first;
+            }
+        }
+
+        vector(size_type n, const value_type& val = value_type())
+        {
+            reserve(n);
+            for (int i = 0; i < n; ++i)
+            {
+                push_back(val);
+            }
+        }
+
+        // vector<int> v(10, 0); 避免和迭代器区间构造歧义
+        vector(int n, const value_type& val = value_type())
+        {
+            reserve(n);
+            for (int i = 0; i < n; ++i)
+            {
+                push_back(val);
+            }
+        }
+
+    private:
+        iterator _start = nullptr;
+        size_type _size = 0;
+        size_type _capacity = 0;
+    };
+
+    void test_vector()
+    {
+        vector<int> v;
+        v.push_back(1);
+        v.push_back(2);
+        v.push_back(3);
+        v.push_back(4);
+        v.push_back(5);
+
+        for (auto e : v)
+        {
+            std::cout << e << std::endl;
+        }
+        std::cout << std::endl;
+
+        v.erase(v.begin() + 1);
+        for (auto e : v)
+        {
+            std::cout << e << std::endl;
+        }
+        std::cout << std::endl;
+
+        v.pop_back();
+        for (auto e : v)
+        {
+            std::cout << e << std::endl;
+        }
+        std::cout << std::endl;
+    }
+}
+
+namespace mystd1
+{
     template <class T>
     inline void destroy(T* pointer) {
         pointer->~T();
@@ -45,7 +219,7 @@ namespace mystd
         void destroy(iterator first, iterator last)
         {
             for (; first < last; ++first)
-                mystd::destroy(&*first);
+                mystd1::destroy(&*first);
         }
     public:
         iterator __copy_forward(iterator first, iterator last, iterator result)
