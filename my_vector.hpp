@@ -142,8 +142,36 @@ namespace mystd
         size_type _size = 0;
         size_type _capacity = 0;
     };
-
     void test_vector()
+    {
+        vector<string> v;
+        v.push_back("1");
+        v.push_back("2");
+        v.push_back("3");
+        v.push_back("4");
+        v.push_back("5");
+
+        for (auto e : v)
+        {
+            std::cout << e << std::endl;
+        }
+        std::cout << std::endl;
+
+        v.erase(v.begin() + 1);
+        for (auto e : v)
+        {
+            std::cout << e << std::endl;
+        }
+        std::cout << std::endl;
+
+        v.pop_back();
+        for (auto e : v)
+        {
+            std::cout << e << std::endl;
+        }
+        std::cout << std::endl;
+    }
+    void test_vector1()
     {
         vector<int> v;
         v.push_back(1);
