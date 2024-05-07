@@ -29,5 +29,11 @@
     <ClInclude Include="my_vector.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="my_stack.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="my_queue.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
