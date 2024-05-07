@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="my_list.hpp" />
+    <ClInclude Include="my_priority_queue.hpp" />
     <ClInclude Include="my_queue.hpp" />
     <ClInclude Include="my_string.hpp" />
     <ClInclude Include="my_vector.hpp" />
