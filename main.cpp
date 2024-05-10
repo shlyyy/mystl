@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
     std::cout << "begin main" << std::endl;
 
     //mystd::test_priority_queue();
-    test_binary_search_tree();
+    mypair::test_binary_search_tree_kv();
 
     std::cout << "end main" << std::endl;
     return 0;
