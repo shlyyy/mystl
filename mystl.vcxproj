@@ -130,6 +130,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="my_avl.hpp" />
     <ClInclude Include="my_binary_search_tree.hpp" />
     <ClInclude Include="my_list.hpp" />
     <ClInclude Include="my_priority_queue.hpp" />

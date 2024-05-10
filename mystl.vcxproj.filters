@@ -44,5 +44,8 @@
     <ClInclude Include="my_binary_search_tree.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="my_avl.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

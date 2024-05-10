@@ -5,6 +5,7 @@
 #include "my_queue.hpp"
 #include "my_priority_queue.hpp"
 #include "my_binary_search_tree.hpp"
+#include "my_avl.hpp"
 
 #include <iostream>
 
@@ -12,8 +13,7 @@ int main(int argc, char* argv[])
 {
     std::cout << "begin main" << std::endl;
 
-    //mystd::test_priority_queue();
-    mypair::test_binary_search_tree_kv();
+    test_avl_tree();
 
     std::cout << "end main" << std::endl;
     return 0;
