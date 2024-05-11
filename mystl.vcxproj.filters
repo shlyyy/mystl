@@ -47,5 +47,8 @@
     <ClInclude Include="my_avl.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="my_rbtree.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
