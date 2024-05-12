@@ -133,9 +133,12 @@
     <ClInclude Include="my_avl.hpp" />
     <ClInclude Include="my_binary_search_tree.hpp" />
     <ClInclude Include="my_list.hpp" />
+    <ClInclude Include="my_map.hpp" />
     <ClInclude Include="my_priority_queue.hpp" />
     <ClInclude Include="my_queue.hpp" />
     <ClInclude Include="my_rbtree.hpp" />
+    <ClInclude Include="my_rbtree_v2.hpp" />
+    <ClInclude Include="my_set.hpp" />
     <ClInclude Include="my_string.hpp" />
     <ClInclude Include="my_vector.hpp" />
     <ClInclude Include="my_stack.hpp" />

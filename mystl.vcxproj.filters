@@ -50,5 +50,14 @@
     <ClInclude Include="my_rbtree.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="my_rbtree_v2.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="my_set.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="my_map.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
