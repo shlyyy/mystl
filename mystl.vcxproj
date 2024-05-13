@@ -141,6 +141,8 @@
     <ClInclude Include="my_rbtree_v2.hpp" />
     <ClInclude Include="my_set.hpp" />
     <ClInclude Include="my_string.hpp" />
+    <ClInclude Include="my_unordered_map.hpp" />
+    <ClInclude Include="my_unordered_set.hpp" />
     <ClInclude Include="my_vector.hpp" />
     <ClInclude Include="my_stack.hpp" />
   </ItemGroup>

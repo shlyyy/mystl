@@ -9,7 +9,9 @@
 //#include "my_rbtree_v2.hpp"
 //#include "my_set.hpp"
 //#include "my_map.hpp"
-#include "my_hash_table.hpp"
+//#include "my_hash_table.hpp"
+#include "my_unordered_set.hpp"
+#include "my_unordered_map.hpp"
 
 #include <iostream>
 
@@ -17,8 +19,8 @@ int main(int argc, char* argv[])
 {
     std::cout << "begin main" << std::endl;
 
-    //open_addressing_hashing::test_hash();
-    chained_hashing::compare_container();
+    //my_unordered_set::test_unordered_set();
+    my_unordered_map::test_unordered_map();
 
     std::cout << "end main" << std::endl;
     return 0;

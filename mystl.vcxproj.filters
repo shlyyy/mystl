@@ -62,5 +62,11 @@
     <ClInclude Include="my_hash_table.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="my_unordered_set.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="my_unordered_map.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
