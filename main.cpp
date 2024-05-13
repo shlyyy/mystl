@@ -17,7 +17,8 @@ int main(int argc, char* argv[])
 {
     std::cout << "begin main" << std::endl;
 
-    open_addressing_hashing::test_hash();
+    //open_addressing_hashing::test_hash();
+    chained_hashing::compare_container();
 
     std::cout << "end main" << std::endl;
     return 0;
