@@ -13,7 +13,8 @@
 //#include "my_unordered_set.hpp"
 //#include "my_unordered_map.hpp"
 
-#include "my_bitset.hpp"
+//#include "my_bitset.hpp"
+#include "my_bloom_filter.hpp"
 
 #include <iostream>
 
@@ -21,9 +22,7 @@ int main(int argc, char* argv[])
 {
     std::cout << "begin main" << std::endl;
 
-    //my_unordered_set::test_unordered_set();
-    //my_unordered_map::test_unordered_map();
-    my_bitset::test_bitset();
+    test_bloom_filter();
 
     std::cout << "end main" << std::endl;
     return 0;

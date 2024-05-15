@@ -71,5 +71,8 @@
     <ClInclude Include="my_bitset.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="my_bloom_filter.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

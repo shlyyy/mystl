@@ -133,6 +133,7 @@
     <ClInclude Include="my_avl.hpp" />
     <ClInclude Include="my_binary_search_tree.hpp" />
     <ClInclude Include="my_bitset.hpp" />
+    <ClInclude Include="my_bloom_filter.hpp" />
     <ClInclude Include="my_hash_table.hpp" />
     <ClInclude Include="my_list.hpp" />
     <ClInclude Include="my_map.hpp" />
